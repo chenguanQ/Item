@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>模拟购物车功能-jq</title>
+    <!-- <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+     <link rel="stylesheet" href="css/shopCart.css" />
+    <script type="text/javascript" src="js/jquery-2.1.0.js" ></script> -->
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    table th,
+    table td,
+    input {
+        text-align: center;
+    }
+
+    table #checkAll {
+        width: 150px;
+    }
+
+    table #checkAll label {
+        cursor: pointer;
+        background: red;
+        padding-left: 10px;
+    }
+
+    table .check label {
+        cursor: pointer;
+        background: red;
+    }
+
+    table #checkAll input,
+    table .check input {
+        visibility: hidden;
+
+    }
+
+    table input[type="text"] {
+        width: 50px;
+        overflow: hidden;
+    }
+
+    table span {
+        display: inline-block;
+        width: 20px;
+        background: #8C8C8C;
+        margin: 0px 5px;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+
+    <table class="table">
+        <tr>
+            <th id="checkAll"><label><input type="checkbox" checked />全选</label><button>删除</button></th>
+            <th>商品名称</th>
+            <th>商品价格(元)</th>
+            <th>数目</th>
+            <th>小计(元)</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td class="check"><label><input type="checkbox" checked /></label></td>
+            <td>商品名称1</td>
+            <td class="price">22.50</td>
+            <td><span class="sub">-</span><input type="text" value="1" class="num" /><span class="add">+</span></td>
+            <td class="subtotal">22.50</td>
+            <td class="del"><button>删除</button></td>
+        </tr>
+        <tr>
+            <td class="check"><label><input type="checkbox" checked /></label></td>
+            <td>商品名称2</td>
+            <td class="price">12.50</td>
+            <td><span class="sub">-</span><input type="text" value="1" class="num" /><span class="add">+</span></td>
+            <td class="subtotal">12.50</td>
+            <td class="del"><button>删除</button></td>
+        </tr>
+        <tr>
+            <td class="check"><label><input type="checkbox" checked /></label></td>
+            <td>商品名称3</td>
+            <td class="price">110.40</td>
+            <td><span class="sub">-</span><input type="text" value="1" class="num" /><span class="add">+</span></td>
+            <td class="subtotal">110.40</td>
+            <td class="del"><button>删除</button></td>
+        </tr>
+        <tr>
+            <td colspan="5" style="text-align: right;">总件数：<i id="numAll">0</i>件 &nbsp; &nbsp; 总计：<i
+                    id="total">0.00</i>元</td>
+        </tr>
+    </table>
+<script src="./lib/jquery-3.4.1.js"></script>
+    <!-- <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/shopCart.js" type="text/javascript" charset="utf-8"></script> -->
+    <script>
+        $(function () {
+
+            // 全选
+            $("#checkAll input").click(function () {
+                var flag = $(this).prop("checked");
+                if (flag) {
+                    $(".check label input").prop("checked", true);
+
+                    $("#checkAll label").css("background",
+                    "url(./images/del.png) no-repeat center left");
+                    $(".check label").css("background", "red");
+
+                } else {
+                    $(".check label input").prop("checked", false);
+
+                    $("#checkAll label").css("background",
+                        "url(img/confirm_no.png) no-repeat center left");
+                    $(".check label").css("background", "#ccc");
+                }
+                counts();
+                totalPrice();
+            });
+
+            //单选
+            $(".check input").click(function () {
+                var flag = $(this).prop("checked"); //获取当前input的状态
+                var CL = $(".check input").length; //列表长度；
+                var CH = $(".check input:checked").length; //列表中被选中的长度
+
+                if (flag) {
+                    $(this).parent("label").css("background", "red");
+                } else {
+                    $(this).parent("label").css("background",
+                        "#ccc");
+                }
+
+                if (CL == CH) {
+                    $("#checkAll input").prop("checked", true);
+                    $("#checkAll label").css("background",
+                    "red");
+                } else {
+                    $("#checkAll input").prop("checked", false);
+                    $("#checkAll label").css("background",
+                        "#ccc");
+                }
+                counts();
+                totalPrice();
+            })
+
+            //数目加
+            $(".add").click(function () {
+                var num = $(this).prev().val();
+                var price = parseFloat($(this).parent().siblings(".price").text());
+                num++;
+                $(this).prev().val(num);
+
+                //      小计
+                $(this).parent().siblings(".subtotal").text((price * num).toFixed(2));
+                counts();
+                totalPrice();
+            })
+
+            //数目减
+            $(".sub").click(function () {
+                var num = $(this).next().val();
+                var price = parseFloat($(this).parent().siblings(".price").text());
+                num--;
+
+                if (num <= 0) {
+                    num = 0
+                }
+                $(this).next().val(num);
+
+                //      小计
+                $(this).parent().siblings(".subtotal").text((price * num).toFixed(2));
+                counts();
+                totalPrice();
+            })
+
+            //文本框脱里焦点处理
+            $('.num').each(function (i) {
+                $(this).blur(function () {
+                    let p = parseFloat($(this).parents('tr').find(".subtotal").text());
+                    let c = parseFloat(this.value);
+                    console.log(p * c);
+                    $(this).parents('tr').find(".subtotal").text((c * p).toFixed(2));
+                    counts();
+                    totalPrice();
+                })
+            })
+
+            //单行删除
+            $(".del button").click(function () {
+                var flag = $(this).parent().siblings().find("input").prop("checked");
+                if (flag) {
+                    if (confirm("是否确定删除")) {
+                        $(this).parents("tr").remove();
+                        var CL = $(".check input").length; //列表长度；
+                        if (CL == 0) {
+                            $("#checkAll label input").prop("checked", false);
+                            $("#checkAll label").css("background",
+                                "red");
+                        }
+                        counts();
+                        totalPrice();
+                    }
+                }
+            })
+
+            //全删除
+            $("#checkAll button").click(function () {
+                var flag = $(this).prev().children().prop("checked");
+                //        console.log(flag);
+                if (flag) {
+
+                    if (confirm("是否确定删除")) {
+
+                        $(".check").parent().remove();
+                        var CL = $(".check input").length; //列表长度；
+
+                        if (CL == 0) {
+                            $("#checkAll label input").prop("checked", false);
+                            $("#checkAll label").css("background",
+                                "url(img/confirm_no.png) no-repeat center left");
+                        }
+                        counts();
+                        totalPrice();
+                    }
+
+                }
+            })
+
+            //总价格
+            totalPrice();
+
+            function totalPrice() {
+                var prices = 0;
+                $('.check input:checked').each(function (i) {
+                    console.log()
+                    prices += parseFloat($(this).parents("tr").find('.subtotal').text());
+                })
+                $('#total').text(prices);
+            }
+            //总数目
+            counts();
+
+            function counts() {
+                var sum = 0;
+                $('.check input:checked').each(function (i) {
+                    sum += parseInt($(this).parents("tr").find('.num').val());
+                })
+                $('#numAll').text(sum);
+            }
+
+        })
+    </script>
+</body>
+
+</html>

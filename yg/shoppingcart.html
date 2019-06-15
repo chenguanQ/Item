@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>央广购物-购物车</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/shoppingcart.css">
+</head>
+
+
+<body>
+    <div id="shoppingcart">
+        <div class="header">
+            <div class="header-content">
+                <div class="back-home">
+                    <a href="http://127.0.0.1/yg/">
+                        <span class="icon"></span>
+                        返回商城首页</a>
+                </div>
+                <include src="./header.html"></include>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-content">
+                <div class="top-list">
+                    <h2>
+                        <img src="./images/logo.png" alt="">
+                    </h2>
+                    <div class="right">
+                        <ul class="nav">
+                            <li>
+                                <i></i>
+                                <p>我的购物车</p>
+                            </li>
+                            <li>
+                                <i></i>
+                                <p>确认订单/结算</p>
+                            </li>
+                            <li>
+                                <i></i>
+                                <p>生成订单/支付</p>
+                            </li>
+                            <li>
+                                <i></i>
+                                <p>完成支付</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="null-shopping">
+                    <i class="icon"></i>
+                    <div class="null-text">
+                        <h4>您的购物车还没有商品</h4>
+                        <p><a class="btn-go" href="">
+                                <i class="icon-1"></i>
+                                马上去购物</a>
+                            <a class="btn-chear" href="">
+                                <i class="icon-2"></i>
+                                查看自己的订单</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="ncc-main">
+                    <table>
+                    <h3>我的购物车</h3>
+                    <h5>查看购物车中所添加的商品；增加减少数量、并勾选确认想要购买的商品进入下一步操作。</h5>
+                    <ul class="columns">
+                        <li class="col-opt">
+                            <span class="checkbox-layout">
+                                <label><input type="checkbox" class="checkbox"  id="checkedAllBtn"
+                                        autocomplete="off">全选</label>
+                            </span>
+                        </li>
+                        <li class="col-goods">商品</li>
+                        <li class="col-quantity">数量</li>
+                        <li class="col-unitprice">单价</li>
+                        <li class="col-rebate">优惠</li>
+                        <li class="col-amount">金额</li>
+                    </ul>
+                    <div class="official"> <span class="checkbox-layout">
+                            <input type="checkbox" class="checkbox" checkbox autocomplete="off" id="storeAllCheck_1">
+                            <label></label>
+                        </span><a class="store-name" href="">官方店铺</a>
+                    </div>
+                    <div id="carList">
+                        <!-- <div class="goods-zone">
+                            <div class="commodity">
+                                <span class="checkbox-layout">
+                                    <input type="checkbox" class="checkbox" autocomplete="off" id="storeAllCheck_1">
+                                    <label></label>
+                            </div>
+                            <div class="goods-img">
+                                <a href="">
+                                    <img src="./images/cart1.jpg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="goods-main">
+                                <div class="spu-name">
+                                    <a href="">国典庆功酒鉴赏周年庆特惠组 货号126225</a>
+                                </div>
+                                <div class="panel-remove">
+                                    <a class="icon-collect" href="javascript:;">
+                                        <i><img src="./images/shoucang.png" alt=""></i>
+                                    </a>
+                                    <a class="icon-delete" href="javascript:;">
+                                        <i><img src="./images/del.png" alt=""></i>
+                                    </a>
+                                </div>
+                                <ul class="sup-singles">
+                                    <li class="sku-quantity">
+                                        <a href="javascript:;" class="subtract">
+                                            <i>－</i>
+                                        </a>
+                                        <input type="text" class="input-text" value="1" autocomplete="off">
+                                        <a href="javascript:;" class="push">
+                                            <i>＋</i>
+                                        </a>
+                                    </li>
+                                    <li class="unit-pcire">
+                                        <span>¥222</span>
+                                    </li>
+                                    <li class="total-prices">
+                                        <span>¥999</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div> -->
+                    </div>
+
+                    <div class="close-show">
+                        <div class="left">
+                            <span class="checkbox-layout">
+                                <label for="checkedBtn">
+                                    <input type="checkbox" class="checkbox" id="checkedBtn" checkbox autocomplete="off">
+                                    全选</label>
+                            </span>
+                            <a href="javascript:;" class="delete-checked" id="mDelSkuBtn"
+                                style="margin-left: 30px">删除</a>
+                        </div>
+                        <div class="centre">
+                            <dl>
+                                <dt>选购商品种类：</dt>
+                                <dd class="kinds-total"><span class="value" id="kindsTotal">0</span>种</dd>
+                                <dt>选购数量总计：</dt>
+                                <dd class="quantity-total"><span class="value" id="quantityTotal">0</span>件</dd>
+                                <dt>商品金额总计：</dt>
+                                <dd class="amount-total">
+
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="right">
+                            <button id="cartSubmit" class="checkout">结算</button>
+                        </div>
+                    </div>
+                </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="buttom">
+                    <div class="warpper3">
+                        <p><a href="/">首页</a>
+                            | <a target="_blank" href="">招商合作</a>
+                            | <a target="_blank" href="">关于央广购物</a>
+                            | <a target="_blank" href="">联系我们</a>
+                            | <a target="_blank" href="">成为供应商</a>
+                        </p>
+                        <p>
+                            <a href="">京公网安备：11011502003547</a>&nbsp;&nbsp;<a target="_blank"
+                                href="">京ICP备19000295号</a>&nbsp;&nbsp;
+                            <a target="_blank" href="">食品流通许可证编号：SP1101151210063489</a>&nbsp;&nbsp;
+                            <a target="_blank" href="">信息网络传播视听节目许可证 0102002号</a>&nbsp;&nbsp;
+                            <a target="_blank" href="">营业执照</a>
+
+                        </p>
+                        <p>Copyright<em style="margin:0 4px">&copy;</em>2010-2019 cnrmall.com All Rights
+                            Reserved&nbsp;&nbsp;&nbsp;&nbsp;服务热线：4008-518-518</p>
+                        <ul class="footer-img">
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="./lib/jquery-3.4.1.js"></script>
+<script src="./lib/include.js"></script>
+
+<script src="./lib/Cookie.js"></script>
+<script src="./lib/header.js"></script>
+<script src="./lib/shoppingcart.js"></script>
+
+</html>

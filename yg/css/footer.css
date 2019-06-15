@@ -1,0 +1,184 @@
+#yg .footer {
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+#yg .footer .warpper {
+    width: 100%;
+    height: 86px;
+    border: 1px solid #e3e3e3;
+    margin-top: 20px;
+
+}
+
+.footer .warpper .streamer {
+    width: 1000px;
+    height: 86px;
+    margin: 0 auto;
+}
+
+.footer .warpper .streamer i {
+    display: block;
+    float: left;
+    width: 250px;
+    height: 86px;
+    background: url(../images/cti.png) no-repeat 0 0;
+}
+
+.footer .warpper .streamer .icon2 {
+    background-position: -250px 0px;
+}
+
+.footer .warpper .streamer .icon3 {
+    background-position: -500px 0px;
+}
+
+.footer .warpper .streamer .icon4 {
+    background-position: -750px 0px;
+}
+
+.footer .faq {
+    width: 100%;
+}
+
+.footer .faq .warpper1 {
+    width: 1210px;
+    margin: 0 auto;
+    height: 183px;
+}
+
+.footer .faq .warpper1 .notice {
+    width: 300px;
+    height: 134px;
+    float: left;
+    border-right: 1px solid #eaeaea;
+    margin: 25px 0 25px 2%;
+}
+
+.footer .faq .warpper1 .notice h2 {
+    font: 400 16px/20px "微软雅黑";
+    color: #666;
+    padding: 5px 5px 5px 20px;
+    margin: 0px 0 5px;
+}
+
+.footer .faq .warpper1 .notice .content-news ul {
+    height: 146px;
+    overflow: hidden;
+}
+
+.footer .faq .warpper1 .notice .content-news li {
+    width: 250px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 24px;
+    overflow: hidden;
+}
+
+.footer .faq .warpper1 .notice .content-news a {
+    color: #999;
+}
+
+.footer .faq .warpper1 .link {
+    width: 823px;
+    float: left;
+    font-size: 0;
+    *word-spacing: -1px;
+    white-space: nowrap;
+    padding: 20px 0%;
+    margin-left: 50px;
+    overflow: hidden;
+}
+
+.footer .faq .warpper1 .link li {
+    font-size: 12px;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    padding: 0 30px;
+}
+
+.footer .faq .warpper1 .link li dl {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer .faq .warpper1 .link li dl dt {
+    font: 400 16px/20px "微软雅黑";
+    color: #666;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.footer .faq .warpper1 .link li dl dd {
+    font: 12px/20px "微软雅黑";
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    clear: both;
+    padding: 2px 5px;
+    overflow: hidden;
+}
+
+.footer .faq .warpper1 a {
+    color: #999;
+}
+
+.footer .buttom {
+    width: 100%;
+    background-color: #343a3a;
+}
+
+.footer .buttom .warpper3 {
+    height: 170px;
+    width: 1210px;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.footer .buttom .warpper3 a {
+    color: #eeeeee;
+}
+
+.footer .buttom .warpper3 p {
+    color: #eeeeee;
+    word-spacing: 5px;
+    padding: 15px 0 0;
+}
+
+.footer .buttom .warpper3 .footer-img {
+    padding: 20px 0 10px;
+    width: 520px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.footer .buttom .warpper3 .footer-img li {
+    float: left;
+    margin-right: 20px;
+}
+
+.footer .buttom .warpper3 .footer-img li a {
+    display: block;
+    width: 108px;
+    height: 40px;
+    background: url(../images/yangguang-footer.png) no-repeat 0 0;
+}
+
+.footer .buttom .warpper3 .footer-img li:nth-child(2) a {
+    background-position: -120px 0;
+}
+
+.footer .buttom .warpper3 .footer-img li:nth-child(3) a {
+    background-position: -240px 0;
+}
+
+.footer .buttom .warpper3 .footer-img li:nth-child(4) a {
+    background-position: -360px 0;
+}

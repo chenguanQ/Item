@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>央广购物-注册</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div id="login">
+        <div class="header">
+            <div class="header-content">
+                <h1 class="site-logo">
+                    <a href="/"><img src="./images/logo.png" alt=""></a>
+                </h1>
+                <div class="login-now">
+                    我已经注册，现在就
+                    <a href="http://127.0.0.1/yg/register.html" title="" class="register">登录</a>
+                </div>
+            </div>
+            <div class="main">
+                <div class="main-content">
+                    <div class="matter">
+                        <div class="left">
+                            <h3><a href="">手机注册</a></h3>
+                            <div class="tabs tabs-1">
+                                <form action="">
+                                    <dl>
+                                        <dt>手机号:</dt>
+                                        <dd>
+                                            <input type="text" name="phone-num" id="phone-num" placeholder="请输入手机号码">
+                                        </dd>
+                                    </dl>
+                                    <div id="regist-slide" class="slide-btn">
+                                        <i></i> <span>点击发送验证码</span>
+                                    </div>
+                                    <div class="safe">
+                                        <span class="auto">
+                                            <input type="checkbox" value="1" class="checkbox" id="clause" name="clause">
+                                            阅读并同意 <a href="">《服务协议》</a>
+                                        </span>
+                                    </div>
+                                    <span class="error-A">
+                                        格式错误
+                                    </span>
+                                    <span class="error-B">
+                                        请勾选
+                                    </span>
+                                </form>
+                            </div>
+                            <div class="tabs tabs-2">
+                                <form action="">
+                                    <dl>
+                                        <dt>动态码:</dt>
+                                        <dd>
+                                            <input type="text" name="code" id="code" placeholder="输入验证码">
+                                        </dd>
+                                        <span class="error-C">验证码错误</span>
+                                    </dl>
+                                    <dl>
+                                        <div class="v_container" id="v_container">
+                                            <strong>更换验证码</strong>
+                                        </div>
+                                        <dt>设置密码:</dt>
+                                        <dd>
+                                            <input type="password" name="pawA" id="pawA" placeholder="">
+                                        </dd>
+                                        <span class="error-D">两次密码不一致</span>
+                                    </dl>
+                                    <dl>
+                                        <dt>确认密码:</dt>
+                                        <dd>
+                                            <input type="password" name="pawB" id="pawB" placeholder="">
+                                        </dd>
+
+                                    </dl>
+                                    <div id="regist-out" class="slide-btn">
+                                        <span>立刻注册</span>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h4>注册之后您可以</h4>
+                            <ul class="list">
+                                <li><i></i>购买商品支付订单</li>
+                                <li><i></i>收藏商品收藏店铺</li>
+                                <li><i></i>安全交易诚信无忧</li>
+                                <li><i></i>会员等级享受特权</li>
+                                <li><i></i>交易评价站外分享</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-content">
+                <div class="buttom">
+                    <div class="warpper3">
+                        <p><a href="/">首页</a>
+                            | <a target="_blank" href="">招商合作</a>
+                            | <a target="_blank" href="">关于央广购物</a>
+                            | <a target="_blank" href="">联系我们</a>
+                            | <a target="_blank" href="">成为供应商</a>
+                        </p>
+                        <p>
+                            <a href="">京公网安备：11011502003547</a>&nbsp;&nbsp;<a target="_blank"
+                                href="">京ICP备19000295号</a>&nbsp;&nbsp;
+                            <a target="_blank" href="">食品流通许可证编号：SP1101151210063489</a>&nbsp;&nbsp;
+                            <a target="_blank" href="">信息网络传播视听节目许可证 0102002号</a>&nbsp;&nbsp;
+                            <a target="_blank" href="">营业执照</a>
+
+                        </p>
+                        <p>Copyright<em style="margin:0 4px">&copy;</em>2010-2019 cnrmall.com All Rights
+                            Reserved&nbsp;&nbsp;&nbsp;&nbsp;服务热线：4008-518-518</p>
+                        <ul class="footer-img">
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/jquery-3.4.1.js"></script>
+<script src="./lib/Cookie.js"></script>
+<script src="./lib/gVerify.js"></script>
+<script src="./lib/include.js"></script>
+<script src="./lib/login.js"></script>
+
+</html>

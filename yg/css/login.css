@@ -1,0 +1,363 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#login {
+    width: 100%;
+    height: 100%;
+}
+
+#login .header {
+    width: 100%;
+    border-bottom: solid 2px #F5F5F5;
+}
+
+#login .header .header-content {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.header .header-content .site-logo {
+    width: 240px;
+    height: 68px;
+}
+
+.header .header-content .login-now {
+    font-size: 14px;
+    color: #aaa;
+    line-height: 24px;
+    height: 24px;
+    margin-top: 50px;
+}
+
+.header .header-content .login-now>a {
+    font-weight: 600px;
+    color: blue;
+    font-size: 15px;
+}
+
+/* -------------------------------- */
+#login .main {
+    width: 100%;
+    min-height: 600px;
+    background: url(../images/register_bg.png);
+    overflow: hidden;
+}
+
+#login .main .main-content {
+    background: rgba(0, 0, 0, 0.15);
+    width: 860px;
+    height: 560px;
+    padding: 10px;
+    margin: 60px auto;
+}
+
+.main .main-content .matter {
+    display: flex;
+    background-color: #FFF;
+    width: 820px;
+    height: 520px;
+    padding: 19px;
+    border: solid 1px #CCC;
+    /* overflow: hidden; */
+}
+
+.main .main-content .matter .left {
+    width: 600px;
+    height: 100%;
+    position: relative;
+}
+
+.main .main-content .matter .left h3 {
+    border-bottom: solid 1px #E6E6E6;
+    height: 40px;
+}
+
+.main .main-content .matter .left h3>a {
+    font-size: 18px;
+    color: #999;
+    margin-left: 100px;
+}
+
+.main .main-content .matter .left .tabs {
+    width: 400px;
+    height: 160px;
+    margin: 50px 80px 0 100px;
+}
+
+.main .main-content .matter .left .tabs dl {
+    background-color: #FFF;
+    width: 398px;
+    height: 52px;
+    margin-top: -1px;
+    border: solid 1px #E6E6E6;
+    display: flex;
+}
+
+.main .main-content .matter .left .tabs dt {
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+    width: 88px;
+    padding: 16px 0 16px 20px;
+}
+
+.main .main-content .matter .left .tabs dd>input {
+    font-size: 14px;
+    line-height: 28px;
+    width: 290px;
+    height: 28px;
+    padding: 0;
+    margin-top: 11px;
+    border: none;
+}
+
+.main .main-content .matter .left .tabs .slide-btn {
+    width: 306px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #00cc00;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    color: #444;
+    margin-top: 20px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 50px;
+}
+
+.main .main-content .matter .left .tabs .slide-btn>i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/slider-click.png");
+    background-size: 100%;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+}
+
+.main .main-content .matter .left .tabs .safe {
+    margin-top: 50px;
+}
+
+.main .main-content .matter .left .tabs .safe .auto {
+    font-size: 14px;
+}
+
+.main .main-content .matter .left .tabs .safe .auto>a {
+    color: blue;
+}
+
+.main .main-content .matter .left .tabs .error-A {
+    display: inline-block;
+    color: #000;
+    line-height: 24px;
+    background: #FFF5D9 no-repeat 0 0;
+    text-align: left;
+    white-space: nowrap;
+    height: 24px;
+    padding: 8px 12px 8px 24px;
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    left: 500px;
+    display: none;
+}
+
+.main .main-content .matter .left .tabs .error-B {
+    display: inline-block;
+    color: #000;
+    line-height: 24px;
+    background: #FFF5D9 no-repeat 0 0;
+    text-align: left;
+    white-space: nowrap;
+    height: 24px;
+    padding: 8px 12px 8px 24px;
+    position: absolute;
+    z-index: 2;
+    top: 240px;
+    left: 300px;
+    display: none;
+}
+
+.main .main-content .matter .left .tabs .v_container {
+    position: absolute;
+    left: 0px;
+    top: -38px;
+}
+
+.main .main-content .matter .error-C {
+    display: inline-block;
+    color: #000;
+    line-height: 24px;
+    background: #FFF5D9 no-repeat 0 0;
+    text-align: left;
+    white-space: nowrap;
+    height: 24px;
+    padding: 8px 12px 8px 24px;
+    position: absolute;
+    z-index: 2;
+    top: 3px;
+    left: 406px;
+    display: none;
+}
+
+.main .main-content .matter .error-D {
+    display: inline-block;
+    color: #000;
+    line-height: 24px;
+    background: #FFF5D9 no-repeat 0 0;
+    text-align: left;
+    white-space: nowrap;
+    height: 24px;
+    padding: 8px 12px 8px 24px;
+    position: absolute;
+    z-index: 2;
+    top: 114px;
+    left: 406px;
+    display: none;
+}
+
+
+
+/* --------------------------- */
+.main .main-content .matter .right {
+    width: 220px;
+    height: 100%;
+    padding: 20px 0 0 19px;
+    border-left: solid 1px #E6E6E6;
+    margin-left: 5px;
+}
+
+.main .main-content .matter .right>h4 {
+    font-size: 14px;
+    line-height: 20px;
+    height: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.main .main-content .matter .right .list li {
+    color: #999;
+    margin-bottom: 10px;
+    padding-left: 12px;
+    font-size: 13px;
+
+}
+
+.main .main-content .matter .right .list li>i {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/login_pic.png) no-repeat;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.main .main-content .matter .right .list li:nth-child(1) i {
+    background-position: 0 -78px;
+}
+
+.main .main-content .matter .right .list li:nth-child(2) i {
+    background-position: -30px -78px;
+}
+
+.main .main-content .matter .right .list li:nth-child(3) i {
+    background-position: -60px -78px;
+}
+
+.main .main-content .matter .right .list li:nth-child(4) i {
+    background-position: -90px -78px;
+}
+
+.main .main-content .matter .right .list li:nth-child(5) i {
+    background-position: -120px -78px;
+}
+
+/* -------------------------- */
+.main .main-content .matter .left .tabs-2 {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    z-index: 20;
+    height: 400px;
+    background: #fff;
+    display: none;
+
+}
+
+/* -------------------------------- */
+#login .footer {
+    margin-top: 130px;
+    width: 100%;
+    background-color: #343a3a;
+}
+
+#login .footer .footer-content {
+    width: 1210px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.footer .buttom {
+    width: 100%;
+    margin-top: 0px;
+
+}
+
+.footer .buttom .warpper3 {
+    height: 170px;
+    width: 1210px;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.footer .buttom .warpper3 a {
+    color: #eeeeee;
+}
+
+.footer .buttom .warpper3 p {
+    color: #eeeeee;
+    word-spacing: 5px;
+    padding: 15px 0 0;
+}
+
+.footer .buttom .warpper3 .footer-img {
+    padding: 20px 0 10px;
+    width: 520px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.footer .buttom .warpper3 .footer-img li {
+    float: left;
+    margin-right: 20px;
+}
+
+.footer .buttom .warpper3 .footer-img li a {
+    display: block;
+    width: 108px;
+    height: 40px;
+    background: url(../images/yangguang-footer.png) no-repeat 0 0;
+}
+
+.footer .buttom .warpper3 .footer-img li:nth-child(2) a {
+    background-position: -120px 0;
+}
+
+.footer .buttom .warpper3 .footer-img li:nth-child(3) a {
+    background-position: -240px 0;
+}
+
+.footer .buttom .warpper3 .footer-img li:nth-child(4) a {
+    background-position: -360px 0;
+}

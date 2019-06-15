@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册用户</title>
+    <script type="text/javascript" src="post_ajax.js"></script>
+</head>
+
+<body>
+    <h1>注册用户</h1>
+    <input type="text" name="userName" id="bt_user" onblur="postajax()" /><label id="lb_text"
+        style="display:none"></label>
+
+</body>
+<script>
+    function postajax() {
+        //XMLHttpRequest创建异步对象
+        var ajax = new XMLHttpRequest();
+        //设置请求的php的url和参数
+        ajax.open('post', 'http://127.0.0.1/yg/src/post_ajax.php');
+        //需要POST 数据，使用 setRequestHeader() 来添加 HTTP 头
+        ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        // send发送请求
+        ajax.send('Name=' + document.querySelector('#bt_user').value);
+        //事件注册
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState == 4 && ajax.status == 200) {
+                //返回接收的内容并修改数据
+                console.log(ajax.responseText);
+                var show = document.querySelector('#lb_text');
+                show.style.display = 'block';
+                if (ajax.responseText == "OK") {
+                    show.innerHTML = '提示：该用户已经注册了！'
+                } else {
+                    show.innerHTML = '提示：你可以使用该名字！'
+                }
+            }
+        };
+    }
+</script>
+<script>
+innerHTML
+</script>
+</html>

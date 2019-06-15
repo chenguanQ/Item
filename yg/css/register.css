@@ -1,0 +1,317 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#register {
+    width: 100%;
+    height: 100%;
+}
+
+#register .header {
+    width: 100%;
+    border-bottom: solid 2px #F5F5F5;
+}
+
+#register .header .header-content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header .header-content .logo {
+    width: 350px;
+    height: 68px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.header .header-content .logo span {
+    display: block;
+    width: 110px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 24px;
+    line-height: 30px;
+    color: #333;
+}
+
+/* ----------------------- */
+#register .tips-inner {
+    width: 100%;
+    background: #fff8f0;
+}
+
+#register .tips-inner .tips-content {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.tips-inner .tips-content>p {
+    font-size: 12px;
+    vertical-align: middle;
+    color: #999;
+}
+
+.tips-inner .tips-content .icon-tips {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url(../images/login_pic.png) no-repeat -150px -250px;
+}
+
+#register .banner {
+    width: 100%;
+    background: #e93854;
+}
+
+#register .banner .main {
+    width: 1000px;
+    height: 480px;
+    margin: 0 auto;
+    background: url(../images/login_img.jpg) no-repeat;
+    overflow: hidden;
+}
+
+.banner .main .nc-login {
+    width: 346px;
+    height: 360px;
+    background: #fff;
+    margin-top: 10px;
+    float: right;
+}
+
+.banner .main .nc-login .login-tabs-nav {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.banner .main .nc-login .login-tabs-nav>li {
+    width: 173px;
+    height: 54px;
+    text-align: center;
+
+}
+
+.banner .main .nc-login .login-tabs-nav li>a {
+    width: 100%;
+    display: block;
+    font-size: 18px;
+    color: #999;
+    margin-top: 10px;
+}
+
+.banner .main .nc-login .login-tabs-nav .tabulous_active {
+    color: #e93854;
+    font-weight: 600;
+    border-right: 1px solid #f4f4f4;
+}
+
+.banner .main .nc-login .tabs-content {
+    width: 304px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.banner .main .nc-login .tabs-content .top {
+    width: 304px;
+    height: 38px;
+    border: 1px solid #bdbdbd;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.banner .main .nc-login .tabs-content label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    border-right: 1px solid #bdbdbd;
+    background: url(../images/login_pic.png) no-repeat 0 -110px;
+
+}
+
+.banner .main .nc-login .tabs-content .paw-icon {
+    background-position: -48px -110px;
+}
+
+.banner .main .nc-login .tabs-content input {
+    overflow: hidden;
+    width: 254px;
+    height: 18px;
+    min-height: 18px;
+    padding: 10px 0 10px 50px;
+    border: 0;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+.banner .main .nc-login .tabs-content .bom {
+    width: 304px;
+    height: 38px;
+    border: 1px solid #bdbdbd;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.banner .main .nc-login .tabs-content .safe .auto .checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 30px;
+
+}
+
+.banner .main .nc-login .tabs-content .safe {
+    position: relative;
+    font-size: 12px;
+}
+
+.banner .main .nc-login .tabs-content .safe .auto>em {
+    position: absolute;
+    top: 0;
+    left: 118px;
+    color: #ff3238;
+    display: none;
+
+}
+
+.banner .main .nc-login .tabs-content .safe .forget-pw-safe {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.banner .main .nc-login .tabs-content .slide-btn {
+    width: 306px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #00cc00;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    color: #444;
+    margin-top: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.banner .main .nc-login .tabs-content .slide-btn>i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/slider-click.png");
+    background-size: 100%;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+}
+
+.banner .main .nc-login .other {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 10px;
+}
+
+.banner .main .nc-login .other i {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/login_pic.png) no-repeat -120px -250px;
+    vertical-align: middle;
+}
+
+.banner .main .nc-login .other a:nth-child(2) {
+    color: #ff3238;
+    font-size: 14px;
+}
+
+.banner .main .nc-login .other b {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background: url(../images/login_pic.png) no-repeat -180px -250px;
+}
+
+/* ----------------------------------------------- */
+#register .footer {
+    margin-top: 130px;
+    width: 100%;
+    background-color: #343a3a;
+}
+
+#register .footer .footer-content {
+    width: 1210px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.footer .buttom {
+    width: 100%;
+    margin-top: 80px;
+
+}
+
+.footer .buttom .warpper3 {
+    height: 170px;
+    width: 1210px;
+    margin: 0 auto;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.footer .buttom .warpper3 a {
+    color: #eeeeee;
+}
+
+.footer .buttom .warpper3 p {
+    color: #eeeeee;
+    word-spacing: 5px;
+    padding: 15px 0 0;
+}
+
+.footer .buttom .warpper3 .footer-img {
+    padding: 20px 0 10px;
+    width: 520px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.footer .buttom .warpper3 .footer-img li {
+    float: left;
+    margin-right: 20px;
+}
+
+.footer .buttom .warpper3 .footer-img li a {
+    display: block;
+    width: 108px;
+    height: 40px;
+    background: url(../images/yangguang-footer.png) no-repeat 0 0;
+}
+
+.footer .buttom .warpper3 .footer-img li:nth-child(2) a {
+    background-position: -120px 0;
+}
+
+.footer .buttom .warpper3 .footer-img li:nth-child(3) a {
+    background-position: -240px 0;
+}
+
+.footer .buttom .warpper3 .footer-img li:nth-child(4) a {
+    background-position: -360px 0;
+}

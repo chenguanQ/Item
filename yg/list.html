@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>央广购物网</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/list.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+</head>
+
+<body>
+    <div id="yglist">
+        <div class="list-header">
+            <div class="back-home">
+                <a href="http://127.0.0.1/yg/">
+                    <span class="icon"></span>
+                    返回商城首页</a>
+            </div>
+            <include src="./header.html"></include>
+        </div>
+        <div class="main">
+            <div class="content">
+                <div class="nav">
+                    <div class="current">
+                        <a href="javascript:;">名酒茗茶</a>
+                        <i class="drop-arrow"></i>
+                    </div>
+                    <span class="arrow">></span>
+                    <div class="current">
+                        <a href="javascript:;">名酒茗茶</a>
+                        <i class="drop-arrow"></i>
+                    </div>
+                </div>
+                <div class="title">
+                    <h3><em>分类 - <strong>“中外名酒”</strong></em>筛选结果</h3>
+                </div>
+                <div class="goods-arr">
+                    <dl>
+                        <dt>包含分类:</dt>
+                        <dd><a href="">红酒</a></dd>
+                        <dd><a href="">白酒</a></dd>
+                        <dd><a href="">洋酒</a></dd>
+                        <dd><a href="">啤酒</a></dd>
+                        <dd><a href="">保健酒</a></dd>
+                        <dd><a href="">其他酒</a></dd>
+                    </dl>
+                </div>
+                <div class="sort-bar">
+                    <div class="bar-array">
+                        <ul class="screen">
+                            <li>默认排序</li>
+                            <li>成交量</li>
+                            <li>价格<i></i></li>
+                            <li>评论</li>
+                        </ul>
+                        <div class="block">
+                            <input type="text" class="input-text" placeholder="￥" id="priceStart" value="">
+                            <span class="line">-</span>
+                            <input type="text" class="input-text" placeholder="￥" id="priceEnd" value="">
+                            <a href="javascript:;" class="btn" id="nchSortbarPriceBtn">确定</a>
+                        </div>
+                        <div class="block block-2">
+                            <div class="">起购量</div>
+                            <input type="text" class="input-text" id="minBuyNum" maxlength="8">
+                            <div class="">以下</div>
+                            <a href="javascript:;" class="btn" id="minBuyNumBtn">确定</a>
+                        </div>
+                        <div class="widget-label">
+                            <span class="widget-label-txt">经营类型 </span>
+                            <i class="widget-label-arrow"></i>
+                        </div>
+                        <div class="widget-label">
+                            <span class="widget-label-txt">促销活动 </span>
+                            <i class="widget-label-arrow"></i>
+                        </div>
+                        <div class="widget-label">
+                            <span class="widget-label-txt">销售模式 </span>
+                            <i class="widget-label-arrow"></i>
+                        </div>
+                        <div class="select-gift">
+                            <span class=""><a class="gifts" href="">
+                                    <i class="input-gift"></i> 赠品</a>
+                            </span>
+                        </div>
+                        <div class="select-gift">
+                            <span class=""><a class="gifts" href="">
+                                    <i class="input-gift"></i> 包邮</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-wrapper">
+                    <ul class="list-show" id="list-show">
+                        <!-- <li class="item">
+                            <div class="goods-content">
+                                <div class="goods-pic">
+                                    <a href="">
+                                        <img src="./images/l1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="goods-info">
+                                    <p class="price">
+                                        <span>￥958.00</span>
+                                        <i>限时折扣</i>
+                                    </p>
+                                    <p class="name">
+                                        <a href="">
+                                            <span>清香世家十二生肖收藏酒 </span>
+
+                                        </a>
+                                        <i>清香纯正 醇甜柔和 余味爽净</i>
+                                    </p>
+                                    <div class="record">
+                                        <strong class="make"><a href="">10</a>笔成交</strong>
+                                        <strong class="comment"><a href="">7 </a>条评论</strong>
+                                    </div>
+                                    <p class="shop">
+                                        <span> <a href="">官方店铺</a></span>
+                                    </p>
+                                    <p class="icons">
+                                        <i>自营</i>
+                                    </p>
+                                    <div class="operate">
+                                        <div class="collect">
+                                            <a href=""><i></i>收藏</a>
+                                        </div>
+                                        <div class="addcart">
+                                            <a href=""><i></i>加入购物车</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> -->
+
+                    </ul>
+                </div>
+                <div class="pagination">
+                    <ul class=" paging">
+                        <li><span >首页</span></li>
+                        <li><span>上一页</span></li>
+                        <li><span class="currentpage">1</span></li>
+                        <li><a class="demo" href=""><span>2</span></a>
+                        </li>
+                        <li><a class="demo" href="https:"><span>下一页</span></a></li>
+                        <li><a class="demo" href=""><span>尾页</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <include src="./footer.html"></include>
+    </div>
+</body>
+<script src="./lib/jquery-3.4.1.js"></script>
+
+<script src="./lib/include.js"></script>
+<script src="./lib/Cookie.js"></script>
+<script src="./lib/header.js"></script>
+
+
+<script src="./lib/common.js"></script>
+<script src="./lib/list.js"></script>
+
+
+
+
+
+</html>

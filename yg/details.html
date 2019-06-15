@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>央广购物-商品详情</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/details.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/magnifier.css">
+    <style>
+        .magnifier-view {
+            width: 650px !important;
+            height: 500px !important;
+        }
+
+        .magnifier-btn span {
+            background: #ccc !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="ygdetails">
+        <div class="details-header">
+            <div class="back-home">
+                <a href="http://127.0.0.1/yg/">
+                    <span class="icon"></span>
+                    返回商城首页</a>
+            </div>
+            <include src="./header.html"></include>
+        </div>
+        <div class="details-main">
+            <div class="content">
+                <div class="nch">
+                    <i class="home"></i>
+                    <span>
+                        <a href="/search?cat=1">名酒茗茶</a>
+                    </span>
+                    <span class="arrow">></span>
+                    <span><a href="/search?cat=1">中外名酒</a></span>
+                    <span class="arrow">></span>
+                    <span><a href="/search?cat=1">白酒</a></span>
+                    <span>五粮液股份公司 五粮印象佳酿 52度500ml浓香型白酒整箱 500mL</span>
+                </div>
+                <div class="ncs-detail">
+                    <div class="goods-zoom">
+                        <div class="magnifier" id="magnifier1">
+                            <div class="magnifier-container">
+                                <div class="images-cover"></div>
+                                <!--当前图片显示容器-->
+                                <div class="move-view"></div>
+                                <!--跟随鼠标移动的盒子-->
+                            </div>
+                            <div class="magnifier-assembly">
+                                <!-- <div class="magnifier-btn">
+                                    <span class="magnifier-btn-left">&lt;</span>
+                                    <span class="magnifier-btn-right">&gt;</span>
+                                </div> -->
+                                <!--按钮组-->
+                                <div class="magnifier-line">
+                                    <ul class="clearfix animation03">
+                                        <li>
+                                            <div class="small-img">
+                                                <img src="./images/mid-1.jpg" />
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="small-img">
+                                                <img src="./images//mid-2.jpg" />
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="small-img">
+                                                <img src="./images//mid-3.jpg" />
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="small-img">
+                                                <img src="./images//mid-4.jpg" />
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="small-img">
+                                                <img src="./images//mid-5.jpg" />
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--缩略图-->
+                            </div>
+                            <div class="magnifier-view"></div>
+                            <!--经过放大的图片显示容器-->
+                        </div>
+                    </div>
+                    <div class="goods-summary">
+                        <div class="goods-name">
+                            <h1>五粮液股份公司 五粮印象佳酿 52度500ml浓香型白酒整箱 500mL</h1>
+                            <strong>美好的时光 印象佳酿</strong>
+                        </div>
+                        <div class="goods-price">
+                            <i>价格</i>
+                            <span><em>¥</em>499.00</span>
+                        </div>
+                        <div class="goods-sale">
+                            <dl>
+                                <dt>优惠券</dt>
+                                <dd>满¥399减¥50</dd>
+                                <dd> 满¥399减¥50</dd>
+                                <dd> 满¥399减¥50</dd>
+                            </dl>
+                        </div>
+                        <div class="goods-logistics">
+                            <dl>
+                                <dt>物流</dt>
+                                <dd> 配送至 &nbsp;</dd>
+                                <dd>广东省广州市荔湾区<i>v</i>&nbsp;</dd>
+                                <dd>有货&nbsp;</dd>
+                                <dd>免运费</dd>
+                            </dl>
+                        </div>
+                        <div class="goods-service">
+                            <dl>
+                                <dt>服务</dt>
+                                <dd>
+                                    非自营 由
+                                    <a href="">天高酒类专营店</a>发货，并提供售后服务。
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="goods-place">
+                            <div class="num">
+                                <dl>
+                                    <dt>数量</dt>
+                                    <dd>
+                                        <div class="amount">
+                                            <span class="cut">-</span>
+                                            <span class="push">+</span>
+                                            <input type="text" style="width: 40px; height: 10px; min-height: 9px"
+                                                value="1">
+
+
+                                        </div>
+                                    </dd>
+                                    <dd class="aa">(库存200)</dd>
+                                </dl>
+                            </div>
+                            <div class="buy">
+                                <a href="" class="buynow" title="">立即购买</a>
+                                <a href="" class="addcart" title=""><i></i>加入购物车</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="goods-rec">
+                        <div class="rec-mod">
+                            <h4>橱窗推荐</h4>
+                            <a href="javascript:" ;>
+                                <i class="icon-1"></i>
+                                换一批</a>
+                        </div>
+                        <ul class="rec-list">
+                            <li>
+                                <a href="">
+                                    <div class="pic">
+                                        <img src="./images/d1.jpg" alt="">
+                                    </div>
+                                    <p class="price">
+                                        ￥199.00
+                                    </p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic">
+                                        <img src="./images/d2.png" alt="">
+                                    </div>
+                                    <p class="price">
+                                        ￥299.00
+                                    </p>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="pic">
+                                        <img src="./images/d3.png" alt="">
+                                    </div>
+                                    <p class="price">
+                                        ￥399.00
+                                    </p>
+
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="details-main1">
+            <div class="content">
+                <div class="main1-left">
+                    <div class="top-bar">
+                        <div class="title">
+                            <h4>热销商品排行</h4>
+                        </div>
+                        <ul class="bar-list">
+                            <li>
+                                <a href="">
+                                    <div class="bar-pic">
+                                        <img src="./images/bar-pic1.jpg" alt="">
+                                    </div>
+                                    <div class="des">
+                                        <p>五粮液股份公司 五粮国宾酒珍品52度浓香型白酒红瓶婚宴送礼 整箱500mL*6</p>
+                                        <p>￥3588.00 </p>
+                                        <p>售出：0</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="bar-pic">
+                                        <img src="./images/bar-pic1.jpg" alt="">
+                                    </div>
+                                    <div class="des">
+                                        <p>五粮液股份公司 五粮国宾酒珍品52度浓香型白酒红瓶婚宴送礼 整箱500mL*6</p>
+                                        <p>￥3588.00 </p>
+                                        <p>售出：0</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="bar-pic">
+                                        <img src="./images/bar-pic1.jpg" alt="">
+                                    </div>
+                                    <div class="des">
+                                        <p>五粮液股份公司 五粮国宾酒珍品52度浓香型白酒红瓶婚宴送礼 整箱500mL*6</p>
+                                        <p>￥3588.00 </p>
+                                        <p>售出：0</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="bar-pic">
+                                        <img src="./images/bar-pic1.jpg" alt="">
+                                    </div>
+                                    <div class="des">
+                                        <p>五粮液股份公司 五粮国宾酒珍品52度浓香型白酒红瓶婚宴送礼 整箱500mL*6</p>
+                                        <p>￥3588.00 </p>
+                                        <p>售出：0</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="bar-pic">
+                                        <img src="./images/bar-pic1.jpg" alt="">
+                                    </div>
+                                    <div class="des">
+                                        <p>五粮液股份公司 五粮国宾酒珍品52度浓香型白酒红瓶婚宴送礼 整箱500mL*6</p>
+                                        <p>￥3588.00 </p>
+                                        <p>售出：0</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="top-bar">
+                        <div class="title">
+                            <h4>热销商品排行</h4>
+                        </div>
+                        <ul class="bar-list">
+                            <li>
+                                <a href="">
+                                    <div class="bar-pic">
+                                        <img src="./images/bar-pic1.jpg" alt="">
+                                    </div>
+                                    <div class="des">
+                                        <p>五粮液股份公司 五粮国宾酒珍品52度浓香型白酒红瓶婚宴送礼 整箱500mL*6</p>
+                                        <p>￥3588.00 </p>
+                                        <p>售出：0</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="bar-pic">
+                                        <img src="./images/bar-pic1.jpg" alt="">
+                                    </div>
+                                    <div class="des">
+                                        <p>五粮液股份公司 五粮国宾酒珍品52度浓香型白酒红瓶婚宴送礼 整箱500mL*6</p>
+                                        <p>￥3588.00 </p>
+                                        <p>售出：0</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="bar-pic">
+                                        <img src="./images/bar-pic1.jpg" alt="">
+                                    </div>
+                                    <div class="des">
+                                        <p>五粮液股份公司 五粮国宾酒珍品52度浓香型白酒红瓶婚宴送礼 整箱500mL*6</p>
+                                        <p>￥3588.00 </p>
+                                        <p>售出：0</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="bar-pic">
+                                        <img src="./images/bar-pic1.jpg" alt="">
+                                    </div>
+                                    <div class="des">
+                                        <p>五粮液股份公司 五粮国宾酒珍品52度浓香型白酒红瓶婚宴送礼 整箱500mL*6</p>
+                                        <p>￥3588.00 </p>
+                                        <p>售出：0</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div class="bar-pic">
+                                        <img src="./images/bar-pic1.jpg" alt="">
+                                    </div>
+                                    <div class="des">
+                                        <p>五粮液股份公司 五粮国宾酒珍品52度浓香型白酒红瓶婚宴送礼 整箱500mL*6</p>
+                                        <p>￥3588.00 </p>
+                                        <p>售出：0</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="main1-right">
+                    <div class="nav">
+                        <ul>
+                            <li><a href="">商品详情</a></li>
+                            <li><a href="">售后保障</a></li>
+                            <li><a href="">商品评价0</a></li>
+                            <li><a href="">购买咨询</a></li>
+                        </ul>
+                    </div>
+                    <div class="goods-sort">
+                        <ul>
+                            <li>产地：四川</li>
+                            <li>容量：375ml-500ml</li>
+                            <li>香型：浓香</li>
+                            <li>度数：50度以上</li>
+                            <li>包装：整箱</li>
+                        </ul>
+                    </div>
+                    <div class="goods-info">
+                        <div>
+                            <img src="./images/info1.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="./images/info2.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="./images/info3.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="./images/info4.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="./images/info5.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="details-main3">
+            <div class="content">
+                <div class="consult">
+                    <h4 class="consult-tit">售后保障</h4>
+                    <div class=" analysis">
+                        <div class="box">
+                            <div class="serve">
+                                <dl>
+                                    <dt><i class="goods"></i><strong>央广承诺</strong></dt>
+                                    <dd>央广商城向您保证所售商品均为正品行货，央广自营商品由央广购物提供发票。</dd>
+                                    <dt><i class="no-worries"></i><strong>无忧退换货</strong></dt>
+                                    <dd>“十五天无理由退货，三十天免费换货”保障。商品签收之日起15天之内对商品不满，在主商品及配件齐全的情况下可享受免费退货服务，收藏品类、贵金属商品类、3C数码类、食品及化妆品类除外；商品使用中出现非人为所致的功能故障或残损，30天之内可享受免费换货服务；
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <p>
+                            <span class="slogan">
+                                <strong>权利声明：</strong>
+                            </span><br>
+                            商城上的所有商品信息、客户评价、商品咨询、网友讨论等内容，是商城重要的经营资源，未经许可，禁止非法转载使用。
+
+                        </p>
+                        <p>
+                            <span>
+                                <strong>注：</strong>
+                            </span>
+                            本站商品信息均来自于合作方，其真实性、准确性和合法性由信息拥有者（合作方）负责。本站不提供任何保证，并不承担任何法律责任。
+
+                        </p>
+                        <p>
+                            <br><span class="slogan">
+                                <strong>价格说明：</strong>
+                            </span><br>
+                        </p>
+                        <p>
+                            <span>
+                                <strong>价格：</strong>
+                            </span>
+                            价格为商品的销售价，是您最终决定是否购买商品的依据。
+                        </p>
+                        <p>
+                            <span>
+                                <strong>划线价：</strong>
+                            </span>商品展示的划横线价格为参考价，该价格可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在商城平台上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。
+
+                        </p>
+
+                        <p>
+                            <span>
+                                <strong>折扣：</strong>
+                            </span>
+                            如无特殊说明，折扣指销售商在原价、或划线价（如品牌专柜标价、商品吊牌价、厂商指导价、厂商建议零售价）等某一价格基础上计算出的优惠比例或优惠金额；如有疑问，您可在购买前联系销售商进行咨询。
+                        </p>
+
+                        <p>
+                            <span>
+                                <strong>异常问题：</strong>
+                            </span>商品促销信息以商品详情页“促销”栏中的信息为准；商品的具体售价以订单结算页价格为准；如您发现活动商品售价或促销信息有异常，建议购买前先联系销售商咨询。
+                        </p>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <include src="./footer.html"></include>
+
+    </div>
+
+
+
+</body>
+
+<script src="./lib/jquery-3.4.1.js"></script>
+<script src="./lib/include.js"></script>
+<script src="./lib/header.js"></script>
+<script src="./lib/details.js"></script>
+<script type="text/javascript" src="./lib/magnifier.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // $.ajax({
+        // 	type: "get",
+        // 	url: "api/getimg.php",//获取图片url
+        // 	async: true,
+        // 	success: function(str) {
+        // 		console.log(str);//[{"id":"1","url":"h_1.jpg&2.jpg&3.jpg&4.jpg&1.png&2.png&3.png&4.png"}]
+        // 		var arr = JSON.parse(str)[0].url.split('&');//切割得到一组图片路径 ['h_1.jpg', '2.jpg', '3.jpg', '4.jpg', 'h_1.jpg', '2.png', '3.png', '4.png']
+        // 		//渲染数据到节点
+        // 		$res = arr.map(function(item) {
+        // 			return `<li>
+        // 						<div class="small-img">
+        // 							<img src="images/${item}" />
+        // 						</div>
+        // 					</li>`;
+        // 		}).join('');
+        //
+        // 		$('.animation03').html($res);
+        //
+        //放大镜插件使用：先渲染再调用插件
+
+
+
+
+        var magnifierConfig = {
+            magnifier: "#magnifier1", //最外层的大容器
+            width: 360, //承载容器宽
+            height: 360, //承载容器高
+            moveWidth: null, //如果设置了移动盒子的宽度，则不计算缩放比例
+            zoom: 2 //缩放比例
+        };
+
+        var _magnifier = magnifier(magnifierConfig);
+    });
+</script>
+
+
+
+</html>
