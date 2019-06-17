@@ -8,19 +8,8 @@ $(function () {
     var goodslist = COOKIE.getItem('goodslist');
 
 
-
-    // if (goodslist.length <= 0) {
-    //     goodslist = [];
-
-
-    // } else {
-    //     goodslist = JSON.parse(goodslist);
-    // }
-
-    // render();
-    // console.log(goodslist[0].qty);
     //更新购物车数据
-    if (goodslist.length != 0) {
+    if (goodslist) {
         goodslist = JSON.parse(goodslist);
         $(".null-shopping").css("display", "none");
         $(".close-show").css("margin-top", "0");
