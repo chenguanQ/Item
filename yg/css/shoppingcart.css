@@ -111,7 +111,7 @@ body {
     top: 140px;
     margin-left: -240px;
     z-index: 20;
-    display: none;
+    /* display: none; */
 
 }
 
@@ -329,6 +329,7 @@ body {
     padding: 4px 12px 2px 0;
     background-color: #F5F5F5;
     padding: 5px;
+   
 }
 
 .ncc-main .goods-main .panel-remove img {
@@ -350,6 +351,7 @@ body {
     padding-left: 18px;
     display: flex;
     justify-content: space-between;
+    margin-top: 280px;
 }
 
 .ncc-main .close-show .centre dl {

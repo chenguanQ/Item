@@ -65,8 +65,8 @@
                                 <div class="magnifier-line">
                                     <ul class="clearfix animation03">
                                         <li>
-                                            <div class="small-img">
-                                                <img src="./images/mid-1.jpg" />
+                                            <div class="small-img first-img">
+                                                <img src="" />
                                             </div>
                                         </li>
                                         <li>
@@ -99,12 +99,12 @@
                     </div>
                     <div class="goods-summary">
                         <div class="goods-name">
-                            <h1>五粮液股份公司 五粮印象佳酿 52度500ml浓香型白酒整箱 500mL</h1>
+                            <h1></h1>
                             <strong>美好的时光 印象佳酿</strong>
                         </div>
                         <div class="goods-price">
                             <i>价格</i>
-                            <span><em>¥</em>499.00</span>
+                            <span><em></em></span>
                         </div>
                         <div class="goods-sale">
                             <dl>
@@ -150,8 +150,8 @@
                                 </dl>
                             </div>
                             <div class="buy">
-                                <a href="" class="buynow" title="">立即购买</a>
-                                <a href="" class="addcart" title=""><i></i>加入购物车</a>
+                                <a href="http://127.0.0.1/yg/shoppingcart.html" class="buynow" title="">立即购买</a>
+                                <a href="javascript:;" class="addcart" title=""><i></i>加入购物车</a>
                             </div>
                         </div>
 
@@ -459,46 +459,11 @@
 
 <script src="./lib/jquery-3.4.1.js"></script>
 <script src="./lib/include.js"></script>
+<script src="./lib/Cookie.js"></script>
 <script src="./lib/header.js"></script>
+
+<script src="./lib/common.js"></script>
+<script src="./lib/magnifier.js"></script>
 <script src="./lib/details.js"></script>
-<script type="text/javascript" src="./lib/magnifier.js"></script>
-<script type="text/javascript">
-    $(function () {
-        // $.ajax({
-        // 	type: "get",
-        // 	url: "api/getimg.php",//获取图片url
-        // 	async: true,
-        // 	success: function(str) {
-        // 		console.log(str);//[{"id":"1","url":"h_1.jpg&2.jpg&3.jpg&4.jpg&1.png&2.png&3.png&4.png"}]
-        // 		var arr = JSON.parse(str)[0].url.split('&');//切割得到一组图片路径 ['h_1.jpg', '2.jpg', '3.jpg', '4.jpg', 'h_1.jpg', '2.png', '3.png', '4.png']
-        // 		//渲染数据到节点
-        // 		$res = arr.map(function(item) {
-        // 			return `<li>
-        // 						<div class="small-img">
-        // 							<img src="images/${item}" />
-        // 						</div>
-        // 					</li>`;
-        // 		}).join('');
-        //
-        // 		$('.animation03').html($res);
-        //
-        //放大镜插件使用：先渲染再调用插件
-
-
-
-
-        var magnifierConfig = {
-            magnifier: "#magnifier1", //最外层的大容器
-            width: 360, //承载容器宽
-            height: 360, //承载容器高
-            moveWidth: null, //如果设置了移动盒子的宽度，则不计算缩放比例
-            zoom: 2 //缩放比例
-        };
-
-        var _magnifier = magnifier(magnifierConfig);
-    });
-</script>
-
-
 
 </html>

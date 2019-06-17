@@ -3,10 +3,10 @@ $(function () {
     $.getJSON("http://127.0.0.1/yg/src/listdata.php",
         function (data) {
             data.forEach((value, i) => {
-                let temp = ` <li class="item" data-guid = "g${i}">
+                let temp = ` <li class="item" data-guid = "${i}">
             <div class="goods-content">
                 <div class="goods-pic">
-                    <a href="http://127.0.0.1/yg/details.html">
+                    <a href="javascript:;" class="details-tit" id =${i}>
                         <img src="${value.src}" alt="">
                     </a>
                 </div>
@@ -48,45 +48,19 @@ $(function () {
 
         }
     );
-    // ---------------------------------------------
-    // COOKIE.getItem
+    // ---------------------------------------
+    //http://127.0.0.1/yg/details.html
+    list.on("click", ".details-tit", function () {
+        var mark = $(this).attr("id");
+        //  console.log(mark);
 
-    // let goods = document.getElementById("list-show");
-    // var goodslist = COOKIE.getItem("goodslist");
-    // if (goodslist === "") {
-    //     goodslist = [];
-    //     console.log(1);
 
-    // } else {
-    //     // goodslist = JSON.parse(goodslist); //只能为json字符串
-    // }
+        window.location.href = `http://127.0.0.1/yg/details.html?id=${mark}`;
 
-    // $("#list-show").on("click", ".addcart", function () {
-    //     let name = $(this).parent().parent().children('.name').children('#name').text();
-    //     let price = $(this).parent().parent().children('.price').children('#price').text();
-    //     let src = $(this).parent().parent().parent().children('.goods-pic').children('a').children('img').attr("src");
-    //     // console.log(name, price,src);
-    //     var Oli = $(this).parent().parent().parent().parent();
-    //     var guid = Oli.attr("data-guid");
-    //     console.log(goodslist.filter())
+    });
 
-    //     // var currenntGoods = goodslist.filter(function(g) {
-    //     //     return g.guid === guid;
-    //     // });
-    //     if (currenntGoods.length > 0) {
-    //         currenntGoods[0].qty++;
-    //     } else {
-    //         var goods = {
-    //             guid: guid,
-    //             imgurl: src,
-    //             name: name,
-    //             price: price,
-    //             qty: 1
-    //         }
-    //         goodslist.push(goods);
-    //     }
-    //     COOKIE.setItem("goodslist", JSON.stringify(goodslist));
-    // });
+
+
     // ----------------------------
     var goods = document.querySelector("#list-show");
     var goodslist = Cookie.get('goodslist');
@@ -103,13 +77,15 @@ $(function () {
             var currentLi = target.parentNode.parentNode.parentNode.parentNode.parentNode;
 
             var guid = currentLi.getAttribute('data-guid');
-            console.log(guid);
+          //  console.log(guid);
+
 
             console.log(guid);
             var currentGoods = goodslist.filter(function (g) {
                 return g.guid === guid;
             });
-
+            console.log(currentGoods);
+            
             if (currentGoods.length > 0) {
                 currentGoods[0].qty++;
             } else {
@@ -124,7 +100,7 @@ $(function () {
                 goodslist.push(goods);
             }
             Cookie.set('goodslist', JSON.stringify(goodslist));
-            console.log(goodslist);
+           // console.log(goodslist);
 
         }
     }

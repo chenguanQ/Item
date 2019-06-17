@@ -9,18 +9,27 @@ $(function () {
 
 
 
-    if (goodslist.length <= 0) {
-        goodslist = [];
-    } else {
-        goodslist = JSON.parse(goodslist);
-    }
+    // if (goodslist.length <= 0) {
+    //     goodslist = [];
 
-    render();
+
+    // } else {
+    //     goodslist = JSON.parse(goodslist);
+    // }
+
+    // render();
     // console.log(goodslist[0].qty);
-
+    //更新购物车数据
+    if (goodslist.length != 0) {
+        goodslist = JSON.parse(goodslist);
+        $(".null-shopping").css("display", "none");
+        $(".close-show").css("margin-top", "0");
+        render();
+    }
     // 清空购物车
     btnClear.onclick = function (e) {
         if (flag) {
+            // $(".checkbox").prop("checked", true);
             alert("确定清空？")
             COOKIE.clear("goodslist");
             goodslist = [];
@@ -35,7 +44,11 @@ $(function () {
 
     // 删除单个
     $("#carList").on("click", ".icon-delete", function () {
-        if (oneFlag) {
+        var c = $(this).parent().parent().siblings(".commodity").children().children().prop("checked");
+        // console.log(c);
+
+
+        if (c) {
             var currentLi = this.parentNode.parentNode.parentNode;
             var guid = currentLi.getAttribute('data-guid');
             console.log(guid);
@@ -49,7 +62,7 @@ $(function () {
             }
 
             COOKIE.setItem('goodslist', JSON.stringify(goodslist));
-
+            amountTptal.innerHTML = `<span style="color: red">0</span>`
             render();
 
         }
@@ -61,7 +74,7 @@ $(function () {
         goodslist[index].qty++;
 
         COOKIE.setItem('goodslist', JSON.stringify(goodslist));
-
+        amountTptal.innerHTML = `<span style="color: red">0</span>`;
         render();
 
     });
@@ -69,12 +82,19 @@ $(function () {
     $("#carList").on("click", ".subtract", function () {
 
         var index = this.getAttribute("data-n");
-        console.log(index);
+        // console.log(index);
 
-        goodslist[index].qty--;
+
+
+        if (goodslist[index].qty < 2) {
+            goodslist[index].qty == 1;
+            return;
+        } else {
+            goodslist[index].qty--;
+        }
 
         COOKIE.setItem('goodslist', JSON.stringify(goodslist));
-
+        amountTptal.innerHTML = `<span style="color: red">0</span>`;
         render();
 
     });
@@ -110,7 +130,7 @@ $(function () {
             return ` <li data-guid="${goods.guid}" >
             <div class="commodity">
             <span class="checkbox-layout">
-                <input type="checkbox" class="checkbox"  autocomplete="off" id="storeAllCheck_1">
+                <input type="checkbox" class="checkbox  ggg"  autocomplete="off" id="storeAllCheck_1">
                 <label></label>
         </div>
         <div class="goods-img">
@@ -150,28 +170,29 @@ $(function () {
                 </li>
             </ul>
         </div></li>`
+
+
         }).join('\n');
         //  console.log(ul);
 
         // 把ul写入页面
+
         oCarList.innerHTML = '';
         oCarList.appendChild(ul);
-
         // console.log(t.value);
 
 
     }
 
-    // if (flag) {
-    //     amountTptal.innerHTML = `<span>${allTotal}</span>`;
-    //     console.log(amountTptal.innerHTML);
 
-    // }
     var flag = false;
-    //    全选
+    // //    全选
     $("#checkedAllBtn, #checkedBtn").click(function () {
         flag = $(this).prop("checked");
+        //  console.log(flag);
+
         if (flag) {
+            render();
             $(".checkbox").prop("checked", true);
             amountTptal.innerHTML = `<span style="color: red">${allTotal}</span>`
 
@@ -185,14 +206,40 @@ $(function () {
 
         }
         //console.log(flag);
-        render();
+        // render();
     });
 
 
-    // 单选
-    var oneFlag = false;
-    $(".checkbox").click(function () {
-        oneFlag = $(this).prop("checked");
+    // // 单选
+    //var oneFlag = false;
+    // $(".checkbox").click(function () {
+    //     flag = $(this).prop("checked");
+    //     console.log(oneFlag);
+    //     if (oneFlag) {
+    //         render();
+    //         $(this).prop("checked", true);
+    //       var b =  $(this).parent().parent().siblings(".goods-main").children(".sup-singles").children(".total-prices").text();
 
-    })
+    //       amountTptal.innerHTML = `<span style="color: red">${b}</span>`;
+    //     }
+    // })
+    var oneFlag = false;
+
+    $("#carList").on("click", ".ggg", function () {
+        console.log($(this));
+
+        oneFlag = $(this).prop("checked");
+        if (oneFlag) {
+
+            $(this).prop("checked", true);
+            var b = ($(this).parent().parent().siblings(".goods-main").children(".sup-singles").children(".total-prices").text() * 1);
+            amountTptal.innerHTML = `<span style="color: red">${b}</span>`;
+            // render();
+            $(this).prop("checked", true);
+        } else {
+            amountTptal.innerHTML = `<span style="color: red">0</span>`;
+        }
+    });
+
+
 })

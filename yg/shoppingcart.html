@@ -51,44 +51,48 @@
                         </ul>
                     </div>
                 </div>
-                <div class="null-shopping">
-                    <i class="icon"></i>
-                    <div class="null-text">
-                        <h4>您的购物车还没有商品</h4>
-                        <p><a class="btn-go" href="">
-                                <i class="icon-1"></i>
-                                马上去购物</a>
-                            <a class="btn-chear" href="">
-                                <i class="icon-2"></i>
-                                查看自己的订单</a>
-                        </p>
-                    </div>
-                </div>
+
 
                 <div class="ncc-main">
-                    <table>
-                    <h3>我的购物车</h3>
-                    <h5>查看购物车中所添加的商品；增加减少数量、并勾选确认想要购买的商品进入下一步操作。</h5>
-                    <ul class="columns">
-                        <li class="col-opt">
-                            <span class="checkbox-layout">
-                                <label><input type="checkbox" class="checkbox"  id="checkedAllBtn"
-                                        autocomplete="off">全选</label>
-                            </span>
-                        </li>
-                        <li class="col-goods">商品</li>
-                        <li class="col-quantity">数量</li>
-                        <li class="col-unitprice">单价</li>
-                        <li class="col-rebate">优惠</li>
-                        <li class="col-amount">金额</li>
-                    </ul>
-                    <div class="official"> <span class="checkbox-layout">
-                            <input type="checkbox" class="checkbox" checkbox autocomplete="off" id="storeAllCheck_1">
-                            <label></label>
-                        </span><a class="store-name" href="">官方店铺</a>
+                    <div class="null-shopping">
+                        <i class="icon"></i>
+                        <div class="null-text">
+                            <h4>您的购物车还没有商品</h4>
+                            <p><a class="btn-go" href="http://127.0.0.1/yg/">
+                                    <i class="icon-1"></i>
+                                    马上去购物</a>
+                                <a class="btn-chear" href="">
+                                    <i class="icon-2"></i>
+                                    查看自己的订单</a>
+                            </p>
+                        </div>
+
                     </div>
-                    <div id="carList">
-                        <!-- <div class="goods-zone">
+
+                    <table>
+                        <h3>我的购物车</h3>
+                        <h5>查看购物车中所添加的商品；增加减少数量、并勾选确认想要购买的商品进入下一步操作。</h5>
+                        <ul class="columns">
+                            <li class="col-opt">
+                                <span class="checkbox-layout">
+                                    <label><input type="checkbox" class="checkbox" id="checkedAllBtn"
+                                            autocomplete="off">全选</label>
+                                </span>
+                            </li>
+                            <li class="col-goods">商品</li>
+                            <li class="col-quantity">数量</li>
+                            <li class="col-unitprice">单价</li>
+                            <li class="col-rebate">优惠</li>
+                            <li class="col-amount">金额</li>
+                        </ul>
+                        <div class="official"> <span class="checkbox-layout">
+                                <input type="checkbox" class="checkbox" checkbox autocomplete="off"
+                                    id="storeAllCheck_1">
+                                <label></label>
+                            </span><a class="store-name" href="">官方店铺</a>
+                        </div>
+                        <div id="carList">
+                            <!-- <div class="goods-zone">
                             <div class="commodity">
                                 <span class="checkbox-layout">
                                     <input type="checkbox" class="checkbox" autocomplete="off" id="storeAllCheck_1">
@@ -132,35 +136,36 @@
                             </div>
 
                         </div> -->
-                    </div>
+                        </div>
 
-                    <div class="close-show">
-                        <div class="left">
-                            <span class="checkbox-layout">
-                                <label for="checkedBtn">
-                                    <input type="checkbox" class="checkbox" id="checkedBtn" checkbox autocomplete="off">
-                                    全选</label>
-                            </span>
-                            <a href="javascript:;" class="delete-checked" id="mDelSkuBtn"
-                                style="margin-left: 30px">删除</a>
-                        </div>
-                        <div class="centre">
-                            <dl>
-                                <dt>选购商品种类：</dt>
-                                <dd class="kinds-total"><span class="value" id="kindsTotal">0</span>种</dd>
-                                <dt>选购数量总计：</dt>
-                                <dd class="quantity-total"><span class="value" id="quantityTotal">0</span>件</dd>
-                                <dt>商品金额总计：</dt>
-                                <dd class="amount-total">
+                        <div class="close-show">
+                            <div class="left">
+                                <span class="checkbox-layout">
+                                    <label for="checkedBtn">
+                                        <input type="checkbox" class="checkbox" id="checkedBtn" checkbox
+                                            autocomplete="off">
+                                        全选</label>
+                                </span>
+                                <a href="javascript:;" class="delete-checked" id="mDelSkuBtn"
+                                    style="margin-left: 30px">删除</a>
+                            </div>
+                            <div class="centre">
+                                <dl>
+                                    <dt>选购商品种类：</dt>
+                                    <dd class="kinds-total"><span class="value" id="kindsTotal">0</span>种</dd>
+                                    <dt>选购数量总计：</dt>
+                                    <dd class="quantity-total"><span class="value" id="quantityTotal">0</span>件</dd>
+                                    <dt>商品金额总计：</dt>
+                                    <dd class="amount-total">
 
-                                </dd>
-                            </dl>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="right">
+                                <button id="cartSubmit" class="checkout">结算</button>
+                            </div>
                         </div>
-                        <div class="right">
-                            <button id="cartSubmit" class="checkout">结算</button>
-                        </div>
-                    </div>
-                </table>
+                    </table>
                 </div>
             </div>
 
