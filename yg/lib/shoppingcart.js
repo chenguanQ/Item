@@ -1,26 +1,42 @@
 $(function () {
     var oCarList = document.getElementById('carList');
-    // var oSubPrice = oCarList.nextElementSibling;
     var btnClear = document.getElementById('mDelSkuBtn');
     var quantityTotal = document.getElementById('quantityTotal');
     var amountTptal = document.getElementsByClassName('amount-total')[0];
     var kinds = document.getElementsByClassName('kinds-total')[0];
     var goodslist = COOKIE.getItem('goodslist');
 
-
-    //更新购物车数据
+    let username = COOKIE.getItem("username");
+    let password = COOKIE.getItem("password");
+    if (username && password) {
+        let o = {
+            username,
+            password
+        };
+        $(".login-link").html(`你好,${o.username}用户 `);
+        $("#exit").css("display", "inline-block");
+    }
+    //点击退出按钮，清空cookie，并刷新主页
+    $("#exit").click(function (e) {
+        e.preventDefault();
+        COOKIE.removeItem("username");
+        COOKIE.removeItem("password");
+        window.location.href = "http://127.0.0.1/yg"
+    });
+    //获取cookie，更新购物车数据
     if (goodslist) {
         goodslist = JSON.parse(goodslist);
         $(".null-shopping").css("display", "none");
         $(".close-show").css("margin-top", "0");
         render();
     }
+
     // 清空购物车
     btnClear.onclick = function (e) {
         if (flag) {
             // $(".checkbox").prop("checked", true);
             alert("确定清空？")
-            COOKIE.clear("goodslist");
+            COOKIE.removeItem("goodslist");
             goodslist = [];
 
             render();
@@ -29,14 +45,10 @@ $(function () {
         }
 
     }
-
-
     // 删除单个
     $("#carList").on("click", ".icon-delete", function () {
         var c = $(this).parent().parent().siblings(".commodity").children().children().prop("checked");
         // console.log(c);
-
-
         if (c) {
             var currentLi = this.parentNode.parentNode.parentNode;
             var guid = currentLi.getAttribute('data-guid');
@@ -49,7 +61,6 @@ $(function () {
                     break;
                 }
             }
-
             COOKIE.setItem('goodslist', JSON.stringify(goodslist));
             amountTptal.innerHTML = `<span style="color: red">0</span>`
             render();
@@ -72,8 +83,6 @@ $(function () {
 
         var index = this.getAttribute("data-n");
         // console.log(index);
-
-
 
         if (goodslist[index].qty < 2) {
             goodslist[index].qty == 1;
@@ -103,8 +112,6 @@ $(function () {
 
         ul.innerHTML = goodslist.map(function (goods, i) {
             // console.log(goodslist);
-
-
 
             var newPrice = (goods.price).slice(1);
             total = newPrice * goods.qty;
@@ -175,7 +182,7 @@ $(function () {
 
 
     var flag = false;
-    // //    全选
+    // 全选
     $("#checkedAllBtn, #checkedBtn").click(function () {
         flag = $(this).prop("checked");
         //  console.log(flag);
@@ -199,19 +206,7 @@ $(function () {
     });
 
 
-    // // 单选
-    //var oneFlag = false;
-    // $(".checkbox").click(function () {
-    //     flag = $(this).prop("checked");
-    //     console.log(oneFlag);
-    //     if (oneFlag) {
-    //         render();
-    //         $(this).prop("checked", true);
-    //       var b =  $(this).parent().parent().siblings(".goods-main").children(".sup-singles").children(".total-prices").text();
-
-    //       amountTptal.innerHTML = `<span style="color: red">${b}</span>`;
-    //     }
-    // })
+    // 单选
     var oneFlag = false;
 
     $("#carList").on("click", ".ggg", function () {

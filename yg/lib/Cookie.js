@@ -2,13 +2,28 @@ let COOKIE = {
     getItem(key) {
 
         let cookies = document.cookie.split("; ");
+        let res = '';
         for (let i = 0; i < cookies.length; i++) {
             let tempArr = cookies[i].split("=");
             if (key == tempArr[0]) {
-                return tempArr[1];
+                res = tempArr[1];
             }
         }
+        return res  ;
     },
+
+   // 第二种
+    // getItem(key) {
+
+    //     let cookies = document.cookie.split("; ");
+    //     for (let i = 0; i < cookies.length; i++) {
+    //         let tempArr = cookies[i].split("=");
+    //         if (key == tempArr[0]) {
+    //             return tempArr[1];
+    //         }
+    //     }
+
+    // },
     setItem(key, value, days) {
         if (!days) {
             document.cookie = `${key}=${value}`;

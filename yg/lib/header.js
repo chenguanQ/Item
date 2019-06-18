@@ -3,10 +3,8 @@ $(function () {
     let cateDetail = $("#cate-detail");
     let allCategory = $("#all-category");
     let oli = $("#cat-list >li");
-
-    //console.log("哈哈哈", oli);
     let cartPart = $(".cart-part");
-    // 注册成功后的跳转
+    // 如果cookie获取到用户的资料 ，渲染ui为登陆状态
     let username = COOKIE.getItem("username");
     let password = COOKIE.getItem("password");
     if (username && password) {
@@ -17,12 +15,15 @@ $(function () {
         $(".login-link").html(`你好,${o.username}用户 `);
         $("#exit").css("display", "inline-block");
     }
+    //点击退出按钮，清空cookie，并刷新主页
     $("#exit").click(function (e) {
         e.preventDefault();
-        COOKIE.clear();
+        COOKIE.removeItem("username");
+        COOKIE.removeItem("password");
         window.location.href = "http://127.0.0.1/yg"
     });
     // -----------------------------------
+    //头部导航 下拉特效
     function topbar(index, name) {
         $(`.nav > li:eq(${index})`).hover(function () {
             $(this).children(`${name}`).stop(true, true).slideDown(150);
@@ -38,7 +39,7 @@ $(function () {
     topbar(3, ".top-menu-tit");
     topbar(4, ".top-menu-con");
 
-
+    //请求数据，渲染侧边一级导航ui
     $.ajax({
         type: "get",
         url: "http://127.0.0.1/yg/src/category.json",
@@ -62,6 +63,7 @@ $(function () {
         }
     })
 
+    //渲染侧边二级导航
     cat.on("mouseenter", "li", function () {
         var index = $(this).index();
         var showCart = $(this).parent().parent().parent().children(".cart-part");

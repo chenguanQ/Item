@@ -9,6 +9,8 @@ $(function () {
     let paw = "";
     let username = COOKIE.getItem("username");
     let password = COOKIE.getItem("password");
+
+    //判断后台有没有该用户资料
     if (username && password) {
         let o = {
             username,
@@ -18,7 +20,7 @@ $(function () {
 
 
     } else {
-
+            //判断用户名是否正确
         $("#username").blur(function (e) {
             e.preventDefault();
             use = $("#username").val().trim();
@@ -30,6 +32,7 @@ $(function () {
                 res = true;
             }
         });
+        //判断密码是否正确
         $("#paw-icon").blur(function (e) {
             e.preventDefault();
             paw = $("#paw-icon").val().trim();
@@ -40,6 +43,7 @@ $(function () {
                 p = true;
             }
         });
+        //判断用户和密码正确后设置cooki，跳转页面
         btn.click(function (e) {
             e.preventDefault();
             let file = $("#autoLogin").prop("checked");
@@ -48,6 +52,7 @@ $(function () {
                 COOKIE.setItem("username", use);
                 COOKIE.setItem("password", paw);
                 netWork(`username=${use}&password=${paw}`);
+                //7天免登陆
                 if (file == true) {
                     COOKIE.setItem("username", use, 7);
                     COOKIE.setItem("password", paw, 7);

@@ -9,6 +9,7 @@ $(function () {
     let num = "";
     // console.log(file);
     let res = false;
+    //判断手机框的值是否符合  正则
     phone.blur(function (e) {
         e.preventDefault();
         num = $(this).val().trim();
@@ -20,6 +21,7 @@ $(function () {
             res = true;
         }
     });
+    //输入错误的提示
     btn.click(function () {
         let file = $("#clause").prop("checked");
         if (!file) {
@@ -45,6 +47,7 @@ $(function () {
             $(".error-C").css("display", "none");
         }
     });
+    // 验证两次密码是否一样
     $("#pawB").change(function (e) {
         e.preventDefault();
         var p = $("#pawA").val().trim();
@@ -60,6 +63,7 @@ $(function () {
             // console.log(register);
         }
     });
+    //点击提交后，生成user资料的cookie ，并跳转到index页
     in_btn.click(function (e) {
         e.preventDefault();
         // var ph = $("#phone-num").val().trim();
@@ -77,6 +81,8 @@ $(function () {
             // console.log(phone);
 
             //console.log(phone, password);
+            
+            //发送请求，把user资料传给后台保存起来
             $.ajax({
                 url: "http://127.0.0.1/yg/src/login.php",
                 dataAll: {

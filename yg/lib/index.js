@@ -1,4 +1,6 @@
 $(function () {
+
+    //秒杀功能的倒计时
     var date = new Date(2019, 6, 9, 20, 0);
     var time = 0;
     var h = 0;
@@ -19,7 +21,7 @@ $(function () {
         }
     }
     timer();
-
+    //倒计时补零
     function bl(num) {
         if (num < 10) {
             num = "0" + num;
@@ -68,7 +70,7 @@ $(function () {
         }
     });
     // -------------------------------------------
-
+    //秒杀模块的手动轮播图
     skUl.append(skUl.children("li:lt(6)").clone());
     let length = skUl.children("li").length;
     let ylength = skUl.children("li").length - 6;
@@ -102,6 +104,8 @@ $(function () {
 
     })
     // -------------------------------------------------------
+
+    //首页商品列表
     let mainList = $("#main-list");
     $.ajax({
         type: "get",
